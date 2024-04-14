@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conference Registration</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 50%; /* Limiting width to 50% */
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            margin-left: auto; /* Centering the input fields */
+            margin-right: auto; /* Centering the input fields */
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Conference Registration</h2>
+<form action="#" method="post">
+    <label for="fullname">Full Name: <span style="color: red;">*</span></label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <br>
+
+    <label for="email">Email Address: <span style="color: red;">*</span></label>
+    <input type="email" id="email" name="email" required>
+
+    <br>
+
+    <label for="age">Age: <span style="color: red;">*</span></label>
+    <input type="number" id="age" name="age" min="18" max="99" value="18" required>
+
+    <br>
+
+    <label>Gender:</label>
+    <label for="male"><input type="radio" id="male" name="gender" value="male"> Male</label>
+    <label for="female"><input type="radio" id="female" name="gender" value="female"> Female</label>
+
+    <br>
+
+    <label for="country">Country of Residence:</label>
+    <select id="country" name="country">
+        <option value="Malaysia">Malaysia</option>
+        <option value="Indonesia">Indonesia</option>
+        <!-- Add more countries as needed -->
+    </select>
+
+    <br>
+
+    <label>Areas of Interest:</label>
+    <label for="software_engineer"><input type="checkbox" id="software_engineer" name="interests[]" value="Software Engineer"> Software Engineer</label>
+    <label for="data_science"><input type="checkbox" id="data_science" name="interests[]" value="Data Science"> Data Science</label>
+    <label for="cybersecurity"><input type="checkbox" id="cybersecurity" name="interests[]" value="Cybersecurity"> Cybersecurity</label>
+    <label for="artificial_intelligence"><input type="checkbox" id="artificial_intelligence" name="interests[]" value="Artificial Intelligence"> Artificial Intelligence</label>
+
+    <br>
+
+    <label>Experience Level:</label>
+    <label for="beginner"><input type="radio" id="beginner" name="experience" value="Beginner"> Beginner</label>
+    <label for="intermediate"><input type="radio" id="intermediate" name="experience" value="Intermediate"> Intermediate</label>
+    <label for="advanced"><input type="radio" id="advanced" name="experience" value="Advanced"> Advanced</label>
+
+    <br>
+
+    <label for="comments">Comments or Questions:</label>
+    <textarea id="comments" name="comments" rows="4"></textarea>
+
+    <br>
+
+    <input type="submit" value="Register">
+    <input type="reset" value="Reset">
+
+    <br>
+    
+</form>
+
+</body>
+</html>
